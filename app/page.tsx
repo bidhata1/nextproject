@@ -1,7 +1,16 @@
 'use client';
 import { useEffect, useState } from 'react';
-import {Post} from './types';
 
+interface Post {
+  id: number;
+  title: string;
+  body: string;
+  tags: string[];
+  reactions: {
+    likes: number;
+    dislikes: number;
+  };
+}
 
 
 export default function Home() {
